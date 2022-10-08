@@ -52,7 +52,7 @@
       
       const guesses = document.querySelector('.guesses');
       const lastResult = document.querySelector('.lastResult');
-      const lowOrHigh = document.querySelector('.lowOrHigh');
+      const lowOrHi = document.querySelector('.lowOrHi');
       
       const guessSubmit = document.querySelector('.guessSubmit');
       const guessField = document.querySelector('.guessField');
@@ -70,19 +70,19 @@
         if (userGuess === randomNumber) {
           lastResult.textContent = 'Congratulations! You got it right!';
           lastResult.style.backgroundColor = 'green';
-          lowOrHigh.textContent = '';
+          lowOrHi.textContent = '';
           setGameOver();
       } else if (guessCount === 10) {
         lastResult.textContent = '!!!GAME OVER!!!';
-        lowOrHigh.textContent = '';
+        lowOrHi.textContent = '';
         setGameOver();
       } else {
         lastResult.textContent = 'Wrong!';
         lastResult.style.backgroundColor = 'red';
         if (userGuess < randomNumber) {
-          lowOrHigh.textContent = 'Last guess was too low!';
+          lowOrHi.textContent = 'Last guess was too low!';
         } else if (userGuess > randomNumber) {
-            lowOrHigh.textContent = 'Last guess was too high!';
+            lowOrHi.textContent = 'Last guess was too high!';
         }
       }
         
